@@ -1,0 +1,228 @@
+<%- include('../../layouts/header') %>
+
+<body>
+	<!-- SIDEBAR -->
+	<section id="sidebar" class="hide">
+		<a href="#" class="brand">
+			<img src="/img/logo.png" class="brand brand-img" alt="" />
+			<span class="text">AdminHub</span>
+		</a>
+		<ul class="side-menu top">
+			<li>
+				<a href="/">
+					<i class="bx bxs-dashboard"></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="/citizens_record">
+					<i class="bx bxs-group"></i>
+					<span class="text">Citizens' Records</span>
+				</a>
+			</li>
+			<li>
+				<a href="/view_report">
+					<i class="bx bxs-error-alt"></i>
+					<span class="text">Reports</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="/borrower_record">
+					<i class="bx bxs-package"></i>
+					<span class="text">Borrowers' Records</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<!-- <li>
+				<a href="#">
+					<i class="bx bxs-cog"></i>
+					<span class="text">Settings</span>
+				</a>
+			</li> -->
+			<li>
+				<a href="/logout" class="logout">
+					<i class="bx bxs-log-out-circle"></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class="bx bx-menu"></i>
+			<a href="#" class="nav-link hidden">Categories</a>
+			<form action="#" class="hidden">
+				<div class="form-input">
+					<input type="search" name="search" placeholder="Search..." />
+					<button type="submit" class="search-btn"><i class="bx bx-search"></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden />
+			<label for="switch-mode" class="switch-mode"></label>
+			<!-- <a href="#" class="notification">
+				<i class="bx bxs-bell"></i>
+				<span class="num">8</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="img/people.png" />
+			</a> -->
+		</nav>
+		<!-- NAVBAR -->
+		<% if (message) { %>
+		<script>
+			Swal.fire({
+				title: '<%= message.titleMessage %>',
+				text: '<%= message.message %>',
+				icon: '<%= message.type %>',
+				confirmButtonText: 'OK',
+			});
+		</script>
+		<% } %>
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Borrowers' Records</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="/borrower_record">Borrowers' Records</a>
+						</li>
+						<li><i class="bx bx-chevron-right"></i></li>
+						<li>
+							<a class="active" href="/borrower_record">Home</a>
+						</li>
+					</ul>
+				</div>
+				<!-- <a href="/import_csv" class="add-button import-csv-button-pop">
+					<i class="bx bxs-cloud-download"></i>
+					<span class="text">Import CSV File</span>
+				</a> -->
+			</div>
+
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Borrowers List</h3>
+						<!-- <div class="add-btn-container">
+							<a href="/" class="add-button add-user-btn"> <i class="bx bxs-user-plus"></i> Add Borrower </a>
+							<a href="/" class="add-button add-many-user-btn">
+								<i class="bx bx-cloud-download"></i>
+								<span class="text">Import Google Form Data</span>
+							</a>
+						</div> -->
+						<form action="#">
+							<div class="form-input">
+								<input type="search" name="search" id="search" placeholder="Search..." />
+								<button type="submit" class="search-btn"><i class="bx bx-search"></i></button>
+							</div>
+						</form>
+					</div>
+					<% if (borrower != '') { %>
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Item Borrowed</th>
+								<th>Item Quantity</th>
+								<th>Date Borrowed</th>
+								<th>Expected Return</th>
+								<th class="action-header">Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<% borrower.forEach((row, index)=> { %>
+							<tr>
+								<td>
+									<img src="img/profilePics/<%=row.borrowImg %>" />
+									<p><%= row.borrowName %></p>
+								</td>
+								<td><%= row.itemName %></td>
+								<td><%= row.itemQuantity %></td>
+								<td><%= row.dateBorrowed %></td>
+								<td><%= row.dateReturn %></td>
+								<td class="actions">
+									<a
+										href="/mark_returned/<%= row._id %>"
+										class="edit youtube-link done-btn"
+										data-text="Mark as Returned"
+										><i class="fas fa-square-check fa-lg mx-1"></i
+									></a>
+
+									<!-- href="/mark_done/<%= row._id %>" -->
+
+									<!-- <a href="/delete/<%= row._id %>" class="delete youtube-link" data-text="Delete User"
+										><i class="fas fa-trash fa-lg mx-1"></i
+									></a> -->
+									<a href="/more_info_borrow/<%= row._id %>" class="more youtube-link" data-text="More Info"
+										><i class="fas fa-info-circle fa-lg mx-1"></i
+									></a>
+									<!-- <a href="/report/<%= row._id %>" class="delete youtube-link" data-text="Report User"
+										><i class="fas fa-circle-exclamation fa-lg mx-1"></i
+									></a>
+									<a href="/give_cert/<%= row.id %>" class="edit cert youtube-link" data-text="Give Certificate"
+										><i class="fas fa-certificate fa-lg mx-1"></i
+									></a> -->
+								</td>
+							</tr>
+							<% }) %> <% } else {%>
+							<div class="no-user-message">
+								<h1>No borrower record found in the database.</h1>
+							</div>
+							<% } %>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- modals -->
+			<!-- mark as done -->
+			<div class="center-container">
+				<div class="profile-card mark-done hidden">
+					<i class="bx bx-x icon close-modal close-mark-done"></i>
+					<div class="image">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="w-6 h-6 profile-img"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286zm0 13.036h.008v.008H12v-.008z"
+							/>
+						</svg>
+					</div>
+
+					<div class="text-data">
+						<span class="name">Import Google Form Data</span>
+						<span class="job">Choose option: </span>
+					</div>
+
+					<div class="buttons">
+						<button class="button no no-mark-done">&larr; Go Back</button>
+						<form class="many-user-form" action="/add_many_user" method="post" id="add-form">
+							<input type="submit" name="submit" value="Proceed &rarr;" class="add-many-btn button yes" />
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="overlay hidden mark-done-overlay"></div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+
+	<script src="scripts/script.js"></script>
+	<script src="scripts/addUser.js"></script>
+	<script src="scripts/addManyUser.js"></script>
+</body>
+<%- include('../../layouts/footer') %>

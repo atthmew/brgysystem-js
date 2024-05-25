@@ -1,0 +1,54 @@
+:root {
+	--poppins: 'Poppins', sans-serif;
+	--lato: 'Lato', sans-serif;
+	--light: #f9f9f9;
+	--blue: #3c91e6;
+	--light-blue: #a5d8ff;
+	--grey: #eee;
+	--dark-grey: #aaaaaa;
+	--dark: #342e37;
+	--red: #db504a;
+	--yellow: #ffce26;
+	--light-yellow: #fff2c6;
+	--orange: #fd7238;
+	--light-orange: #ffe0d3;
+}
+
+.add-pic {
+	margin-top: 24px;
+}
+
+/* Style the input element */
+input[type='file'] {
+	display: none;
+}
+
+/* Style the label element */
+.custom-file-upload {
+	display: inline-block;
+	padding: 4px 20px;
+	background-color: var(--blue);
+	color: #fff;
+	border-radius: 4px;
+	text-transform: uppercase;
+	font-size: 14px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.custom-file-upload:hover,
+.custom-file-upload:active {
+	border-radius: 24px;
+	background-color: #3175ba;
+}
+
+/* Style the "No file chosen" text */
+input[type='file'] + label:after {
+	content: 'No file chosen';
+	margin-left: 10px;
+}
+
+/* Change the text of "No file chosen" when a file is selected */
+input[type='file']:valid + label:after {
+	content: attr(data-file-name);
+}

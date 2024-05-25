@@ -1,0 +1,312 @@
+<%- include('../../layouts/header') %>
+
+<body>
+	<!-- SIDEBAR -->
+	<section id="sidebar" class="hide">
+		<a href="#" class="brand">
+			<img src="/img/logo.png" class="brand brand-img" alt="" />
+			<span class="text">AdminHub</span>
+		</a>
+		<ul class="side-menu top">
+			<li>
+				<a href="/">
+					<i class="bx bxs-dashboard"></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+
+			<li class="active">
+				<a href="/citizens_record">
+					<i class="bx bxs-group"></i>
+					<span class="text">Citizens' Records</span>
+				</a>
+			</li>
+			<li>
+				<a href="/view_report">
+					<i class="bx bxs-error-alt"></i>
+					<span class="text">Reports</span>
+				</a>
+			</li>
+			<li>
+				<a href="/borrower_record">
+					<i class="bx bxs-package"></i>
+					<span class="text">Borrowers' Records</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<!-- <li>
+				<a href="#">
+					<i class="bx bxs-cog"></i>
+					<span class="text">Settings</span>
+				</a>
+			</li> -->
+			<li>
+				<a href="/logout" class="logout">
+					<i class="bx bxs-log-out-circle"></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class="bx bx-menu"></i>
+			<a href="#" class="nav-link hidden">Categories</a>
+			<form action="#" class="hidden">
+				<div class="form-input">
+					<input type="search" name="search" placeholder="Search..." />
+					<button type="submit" class="search-btn"><i class="bx bx-search"></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden />
+			<label for="switch-mode" class="switch-mode"></label>
+			<!-- <a href="#" class="notification">
+				<i class="bx bxs-bell"></i>
+				<span class="num">8</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="/img/people.png" />
+			</a> -->
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Citizens' Records</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="/citizens_record">Citizens' Records</a>
+						</li>
+						<li><i class="bx bx-chevron-right"></i></li>
+						<li>
+							<a href="/citizens_record">Home</a>
+						</li>
+						<li><i class="bx bx-chevron-right"></i></li>
+						<li>
+							<a class="active" href="#">Report User</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="container-report">
+				<div class="form">
+					<div class="contact-form">
+						<form class="report-form" action="/report/<%=user.id %>" method="post" autocomplete="no" spellcheck="false">
+							<h3 class="title-report">Report <%= user.name %></h3>
+							<div class="input-container">
+								<input type="text" name="typeOfIncident" class="input" autocomplete="no" spellcheck="false" required />
+								<label for="">Type of Incident </label>
+								<span>Type of Incident</span>
+							</div>
+							<div class="input-container">
+								<input type="text" name="dateOfIncident" class="input" autocomplete="no" spellcheck="false" />
+								<label for="">Date of Incident (YYYY-MM-DD)</label>
+								<span>Date of Incident (YYYY-MM-DD)</span>
+							</div>
+							<div class="input-container">
+								<input
+									type="text"
+									name="locationOfIncident"
+									class="input"
+									autocomplete="no"
+									spellcheck="false"
+									required
+								/>
+								<label for="">Exact Location of the Incident</label>
+								<span>Exact Location of the Incident</span>
+							</div>
+							<div class="input-container">
+								<input
+									type="text"
+									name="nameOfComplainant"
+									class="input"
+									autocomplete="no"
+									spellcheck="false"
+									required
+								/>
+								<label for="">Name of Complainant</label>
+								<span>Name of Complainant</span>
+							</div>
+							<div class="input-container textarea">
+								<textarea
+									name="detailsOfIncident"
+									class="input"
+									autocomplete="no"
+									spellcheck="false"
+									required
+								></textarea>
+								<label for="">Details of Incident</label>
+								<span>Details of Incident</span>
+							</div>
+							<input type="submit" value="Send" class="btn" />
+						</form>
+					</div>
+					<div class="contact-info">
+						<h3 class="title">Let's get in touch</h3>
+						<p class="text-report">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto consequuntur culpa animi corrupti dolorum
+							quod.
+						</p>
+
+						<div class="info">
+							<div class="information">
+								<i class="fa-solid fa-map-location-dot icon"></i>
+								<p>Bangalore, India 560054</p>
+							</div>
+							<div class="information">
+								<i class="fa-solid fa-envelope icon"></i>
+								<p>tivotalhelp@gmail.com</p>
+							</div>
+							<div class="information">
+								<i class="fa-solid fa-phone-volume icon"></i>
+								<p>1234-567-890</p>
+							</div>
+						</div>
+
+						<div class="social-media">
+							<p>Connect with Us</p>
+							<div class="social-icons">
+								<a href="#"><i class="fab fa-facebook-f"></i></a>
+								<a href="#"><i class="fab fa-instagram"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+								<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+
+	<script>
+		const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
+
+		allSideMenu.forEach((item) => {
+			const li = item.parentElement;
+
+			item.addEventListener('click', function () {
+				allSideMenu.forEach((i) => {
+					i.parentElement.classList.remove('active');
+				});
+				li.classList.add('active');
+			});
+		});
+
+		// TOGGLE SIDEBAR
+		const menuBar = document.querySelector('#content nav .bx.bx-menu');
+		const sidebar = document.getElementById('sidebar');
+
+		menuBar.addEventListener('click', function () {
+			sidebar.classList.toggle('hide');
+		});
+
+		const searchButton = document.querySelector('#content nav form .form-input button');
+		const searchButtonIcon = document.querySelector('#content nav form .form-input button .bx');
+		const searchForm = document.querySelector('#content nav form');
+
+		searchButton.addEventListener('click', function (e) {
+			if (window.innerWidth < 576) {
+				e.preventDefault();
+				searchForm.classList.toggle('show');
+				if (searchForm.classList.contains('show')) {
+					searchButtonIcon.classList.replace('bx-search', 'bx-x');
+				} else {
+					searchButtonIcon.classList.replace('bx-x', 'bx-search');
+				}
+			}
+		});
+
+		const mainSearchButton = document.querySelector('#content main form .form-input button');
+		const mainSearchButtonIcon = document.querySelector('#content main form .form-input button .bx');
+		const mainSearchForm = document.querySelector('#content main form');
+
+		mainSearchButton.addEventListener('click', function (e) {
+			if (window.innerWidth < 576) {
+				e.preventDefault();
+				mainSearchForm.classList.toggle('show');
+				if (mainSearchForm.classList.contains('show')) {
+					mainSearchButtonIcon.classList.replace('bx-search', 'bx-x');
+				} else {
+					mainSearchButtonIcon.classList.replace('bx-x', 'bx-search');
+				}
+			}
+		});
+
+		if (window.innerWidth < 768) {
+			sidebar.classList.add('hide');
+		} else if (window.innerWidth > 576) {
+			searchButtonIcon.classList.replace('bx-x', 'bx-search');
+			searchForm.classList.remove('show');
+		}
+
+		window.addEventListener('resize', function () {
+			if (this.innerWidth > 576) {
+				searchButtonIcon.classList.replace('bx-x', 'bx-search');
+				searchForm.classList.remove('show');
+			}
+		});
+
+		const switchMode = document.getElementById('switch-mode');
+
+		switchMode.addEventListener('change', function () {
+			if (this.checked) {
+				document.body.classList.add('dark');
+			} else {
+				document.body.classList.remove('dark');
+			}
+		});
+
+		// Get the DataTable instance
+		var table = $('table').DataTable({
+			language: {
+				searchPlaceholder: '',
+				paginate: {
+					first: '<<',
+					last: '>>',
+					previous: '<',
+					next: '>',
+				},
+			},
+		});
+
+		// Add event listener to the search input field
+		$('#search').on('keyup', function () {
+			// Perform search on the DataTable
+			table.search(this.value).draw();
+		});
+	</script>
+
+	<!-- report form -->
+	<script>
+		const inputs = document.querySelectorAll('.input');
+
+		function focusFunc() {
+			let parent = this.parentNode;
+			parent.classList.add('focus');
+		}
+
+		function blurFunc() {
+			let parent = this.parentNode;
+			if (this.value == '') {
+				parent.classList.remove('focus');
+			}
+		}
+
+		inputs.forEach((input) => {
+			input.addEventListener('focus', focusFunc);
+
+			input.addEventListener('blur', blurFunc);
+		});
+	</script>
+</body>
+<%- include('../../layouts/footer') %>
