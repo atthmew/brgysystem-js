@@ -121,7 +121,7 @@ In your terminal, navigate to the /backend directory
 cd backend
 ```
 
-the urn the following command to install the backend dependencies:
+the run the following command to install the backend dependencies:
 
 ```bash
 npm install
@@ -133,7 +133,7 @@ This command will install all the required packages specified in the package.jso
 
 ##### Format of the CSV File (CSV Comma Delimited)
 
-name | address | age | phone | civilStatus | birthday | motherName | motherAge | motherOccupation | fatherName |
+name | address | age | phone | civilStatus | birthday | motherName | motherAge | motherOccupation | fatherName | <br/>
 fatherAge | fatherOccupation | img | timeCreated
 
 ##### Step 5.2 (Google API): Get the credentials.json for the googleapis
@@ -217,6 +217,19 @@ npm run dev
 
 This command will start the frontend server, and you'll be able to access the website on localhost:3000 in your web
 browser.
+
+#### Step 10: Create an Account
+
+Go to `http://localhost:your-port-number/signup` then create your account
+
+#### Step 11: Change role of the User
+
+Go to your MongoDB Compass then find the accounts, in there, change the `role` according to your likings.
+
+##### Roles:
+
+- user
+- admin
 
 :exclamation:
 :warning:` If you encounter an OpenSSL error while running the frontend server, follow these additional steps:`
