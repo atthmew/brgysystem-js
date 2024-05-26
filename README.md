@@ -29,8 +29,8 @@
 ## 📱 About this Project
 
 <p align="center">
-<img alt="Discord logo" src="https://github.com/atthmew/brgysystem-js/blob/main/views/img/brgy%201.png" height="350px" width="500px" /> 
-<img alt="Discord logo" src="https://github.com/atthmew/brgysystem-js/blob/main/views/img/brgy%202.png" height="350px" width="500px" /> 
+<img alt="Discord logo" src="https://github.com/atthmew/brgysystem-js/blob/main/views/img/brgy%201.png" height="350px" width="400px" /> 
+<img alt="Discord logo" src="https://github.com/atthmew/brgysystem-js/blob/main/views/img/brgy%202.png" height="350px" width="400px" /> 
 <br/>
 </h1>
   <button>
