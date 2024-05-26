@@ -29,6 +29,8 @@
 ## 📱 About this Project
 
 <p align="center">
+<img alt="Discord logo" src="https://github.com/atthmew/brgysystem-js/blob/main/views/img/brgy%201.png" height="250px" width="250px" />
+</h1>
   <button>
     <a href="https://youtu.be/gtjocsYOeMc"> 
       <img alt="Project Top Language" src="https://img.shields.io/badge/Barangay System Demo-white?style=for-the-badge&logo=YouTube&label=YouTube&labelColor=red"/>
