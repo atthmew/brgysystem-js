@@ -30,14 +30,14 @@
 
 <p align="center">
   <button>
-    <a href="https://youtu.be/DQWjVMU84mM"> 
-      <img alt="Project Top Language" src="https://img.shields.io/badge/InterLink Demo-white?style=for-the-badge&logo=YouTube&label=YouTube&labelColor=red"/>
+    <a href="https://youtu.be/gtjocsYOeMc"> 
+      <img alt="Project Top Language" src="https://img.shields.io/badge/Barangay System Demo-white?style=for-the-badge&logo=YouTube&label=YouTube&labelColor=red"/>
     </a>
   </button>
 </p>
 
 <p>
-Introducing our Barangay System Web Application, a comprehensive solution for efficient barangay management. This web-based platform, designed using the MVC architecture, features a robust citizen records system with full CRUD capabilities, allowing for seamless management of resident data. Administrators can easily handle borrowing requests and maintain detailed borrower records, ensuring smooth transactions. The system also includes a blotter module, enabling the issuance and recording of complaints with ease. For certificate issuance, users can generate personalized documents in one click, instantly downloading DOCX files with the necessary citizen information. Additionally, the application supports CSV and Google Forms for bulk user additions. With powerful report generation features, administrators can quickly download detailed reports on borrowing, complaints, and certificate requests, streamlining barangay operations like never before.</p>
+Introducing, Barangay System Web Application, a comprehensive solution for efficient barangay management. This web-based platform, developed using MVC architecture and primarily utilizing EJS, features a robust citizen records system with full CRUD capabilities, allowing for seamless management of resident data. Administrators can easily handle borrowing requests and maintain detailed borrower records, ensuring smooth transactions. The system also includes a blotter module, enabling the issuance and recording of complaints with ease. For certificate issuance, users can generate personalized documents in one click, instantly downloading DOCX files with the necessary citizen information. Additionally, the application supports CSV and Google Forms for bulk user additions. With powerful report generation features, administrators can quickly download detailed reports on borrowing, complaints, and certificate requests, streamlining barangay operations like never before.</p>
 
 ## 🚀 Technologies
 
