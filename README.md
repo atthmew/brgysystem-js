@@ -47,20 +47,19 @@ Introducing, Barangay System Web Application, a comprehensive solution for effic
 
 Technologies that I used to develop the frontend and backend
 
-- [ReactJS](https://react.dev/)
+- [EJS](https://ejs.co/)
+- [CSV-Parser](https://www.npmjs.com/package/csv-parser)
+- [DOCXTemplater](https://docxtemplater.com/)
+- [Docx-Templates](https://www.npmjs.com/package/docx-templates)
+- [googleapis](https://www.npmjs.com/package/googleapis)
+- [JsonWebToken](https://jwt.io/)
+- [Multer](https://www.npmjs.com/package/multer)
+- [Express-Session](https://www.npmjs.com/package/express-session)
+- [jszip](https://stuk.github.io/jszip/)
+- [SweetAlert](https://sweetalert2.github.io/)
 - [MongoDB](https://www.mongodb.com/)
 - [ExpressJS](https://expressjs.com/)
 - [NodeJS](https://nodejs.org/en)
-- [Socket.IO](https://socket.io/)
-- [Axios](https://axios-http.com/docs/intro)
-- [React-Router-Dom](https://reactrouter.com/en/main)
-- [Emoji-Picker-Heart](https://www.npmjs.com/package/emoji-picker-react)
-- [ReduxJS](https://redux.js.org/)
-- [Buffer](https://nodejs.org/api/buffer.html)
-- [React-Icons](https://github.com/wwayne/react-tooltip)
-- [Styled-Components](https://styled-components.com)
-- [Toastify](https://fkhadra.github.io/react-toastify/introduction/)
-- [Cors](https://expressjs.com/en/resources/middleware/cors.html)
 - [BCrypt](https://www.npmjs.com/package/bcrypt)
 - [Nodemon](https://nodemon.io/)
 - [Mongoose](https://mongoosejs.com/docs/)
@@ -77,11 +76,11 @@ Technologies that I used to develop the frontend and backend
 #### Step 1: Clone the repository
 
 ```bash
-git clone https://github.com/idurar/idurar-erp-crm.git
+git clone https://github.com/atthmew/brgysystem-js.git
 ```
 
 ```bash
-cd idurar-erp-crm
+cd brgysystem-js
 ```
 
 #### Step 2: Create Your MongoDB Account and Database Cluster
