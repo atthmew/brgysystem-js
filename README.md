@@ -135,6 +135,26 @@ This command will install all the required packages specified in the package.jso
 name | address | age | phone | civilStatus | birthday | motherName | motherAge | motherOccupation | fatherName | <br/>
 fatherAge | fatherOccupation | img | timeCreated
 
+##### Format of Certificates (DocX)
+
+- File Names Format:
+
+  - blotter_report_template.docx
+  - borrow_report_template.docx
+  - brgy-certificate.docx
+  - brgy-clearance.docx
+  - cert_report_template.docx
+  - cert-of-indigency.docx
+  - job-certificate.docx
+  - oath-certificate.docx
+  - report_template.docx
+
+- Format of Certificate: `{name}, {civilStatus}, etc. `
+
+![alt text](image.png)
+
+NOTE: The variables names that is used is the same as the variable names in the Format of the CSV File.
+
 ##### Step 5.2 (Google API): Get the credentials.json for the googleapis
 
 - **Enable the Google Sheets API:**
