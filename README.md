@@ -29,7 +29,7 @@
 ## 📱 About this Project
 
 <p align="center">
-<img alt="Discord logo" src="https://github.com/atthmew/brgysystem-js/blob/main/views/img/brgy%201.png" height="500px" width="350px" />
+<img alt="Discord logo" src="https://github.com/atthmew/brgysystem-js/blob/main/views/img/brgy%201.png" height="350px" width="500px" />
 </h1>
   <button>
     <a href="https://youtu.be/gtjocsYOeMc"> 
