@@ -151,7 +151,7 @@ fatherAge | fatherOccupation | img | timeCreated
 
 - Format of Certificate: `{name}, {civilStatus}, etc. `
 
-![alt text](image.png)
+<img alt="Certificate Format" src="https://github.com/atthmew/brgysystem-js/blob/main/views/img/image.png"/>
 
 NOTE: The variables names that is used is the same as the variable names in the Format of the CSV File.
 
