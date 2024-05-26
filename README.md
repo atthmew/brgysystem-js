@@ -231,6 +231,10 @@ Go to your MongoDB Compass then find the accounts, in there, change the `role` a
 - user
 - admin
 
+<br/>
+
+<br/>
+
 :exclamation:
 :warning:` If you encounter an OpenSSL error while running the frontend server, follow these additional steps:`
 
