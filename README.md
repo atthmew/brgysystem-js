@@ -133,7 +133,8 @@ This command will install all the required packages specified in the package.jso
 
 ##### Format of the CSV File (CSV Comma Delimited)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/98978455-ff45-4dc9-a314-70f76fbddeaa/faaa08d0-16cb-45c0-bc7a-c4c87cb83cdc/Untitled.png)
+name | address | age | phone | civilStatus | birthday | motherName | motherAge | motherOccupation | fatherName |
+fatherAge | fatherOccupation | img | timeCreated
 
 ##### Step 5.2 (Google API): Get the credentials.json for the googleapis
 
@@ -172,7 +173,7 @@ Create a Google Form that will take these information (IN PARTICULAR ORDER):
 
 - After creating the Google Form, make sure to link the responses to the Spreadsheet
 - After linking to Spreadsheet, get the id of the spreadsheet and then put it in the:
-  `controller/admin_controller/userController.js` - `addManyUser -> spreadsheetId`
+  `controller/admin_controller/userController.js` - `addManyUser -> 'spreadsheetId'`
 
 #### Step 6: Run Setup Script
 
